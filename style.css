@@ -1,0 +1,397 @@
+body{
+    padding: o;
+    margin: 0;
+    background-color: black;
+    background-image: url("images/background2.jpg");
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+  
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+  
+nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+}
+  
+nav ul li:first-child {
+    margin-left: 0;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+}
+  
+@media (max-width: 768px) {
+    .logo {
+      display: none;
+    }
+    
+    nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f2f2f2;
+      padding: 10px;
+      display: none;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+      
+    nav ul li:first-child {
+        margin-top: 10px;
+    }
+      
+    .menu-icon {
+        display: block;
+    }
+      
+    .menu-icon:before,
+    .menu-icon:after {
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: black;
+        border-radius: 2px;
+        transition: all 0.2s;
+    }
+
+    .menu-icon:before {
+        margin-bottom: 5px;
+    }
+      
+    .menu-icon.open {
+        background-color: transparent;
+    }
+      
+    .menu-icon.open:before {
+        transform: rotate(45deg);
+        margin-bottom: 0;
+    }
+      
+    .menu-icon.open:after {
+        transform: rotate(-45deg);
+    }
+      
+    .menu-icon.open ~ ul {
+        display: block;
+    }
+}
+.logo{
+    width: 10%;
+}
+.nom{
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+.nom h1 {
+    margin: 0;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+nav li{
+    display: inline; /* pour que le texte soit en ligne*/
+    list-style: none; /*pour retirer les déco qui s'ajoutent par défaut par la liste li*/
+}
+.choix:hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: overline;
+}
+
+/*Début image*/
+.image{
+    width: 100%;
+}
+/*Fin image*/
+
+/*Début acceuil*/
+.Acceuil{
+    text-align: left;
+    color: black;
+    margin-left: 7%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.h1 {
+    margin: 0;
+    font-size: 50px;
+}
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #e4cccc;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 4px;
+}
+.btn:hover {
+    background-color: #555;
+    color: #e4cccc;
+}
+.acceuil_texte{
+    width: 60%;
+    margin-right: 10px;
+    flex: 1;
+}
+.acceuil_texte h3{
+    text-align: justify;
+    font-size: 20px;
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.acceuil_btn{
+    float: right;
+    margin-right: 10%;
+    margin-left: 20px;
+    font-weight: bold ;
+    margin-top: 7%;
+}
+/*Fin acceuil*/
+
+/*Début Formation*/
+.Formation{
+    padding-bottom: 10%; /*ca va créer un espace en dessous du dernier bloc blanc*/
+}
+.titreformations{
+    font-size: 40px;
+}
+.Formation h2{
+    text-align: left;
+    margin-left: 7%;
+}
+.formationsecole{
+    margin-left: 15%; /*ca permet d'écarter les 3 blocs blanc vers la droite */
+}
+.formationsecole h1{
+    text-decoration: underline;
+}
+.ecole{
+    width: 80%; /*la largeur*/
+    height: 50%; /*la longeur*/
+    background-color: #e4cccc;
+    align-items: center;
+    border-radius: 3%;
+    color: black;
+}
+.ecole img{ /*on veut modifier les images */
+    margin-left: 43%;
+    width: 15%;
+    height: 20%;
+}
+/*Fin études*/
+
+/*Début experiences*/
+.Experiences{
+    padding-bottom: 5%; /*ca va créer un espace en dessous du dernier bloc blanc*/
+}
+.titreexperiences{
+    text-align: left;
+    color: black;
+    font-size: 40px;
+    margin-left: 7%;
+}
+.Experience{
+    margin-top: 5%;
+    margin-left: 15%; /*ca permet d'écarter les 2 blocs blanc vers la droite*/
+}
+.Experience h1{
+    text-decoration: underline;
+}
+.Experience h4{
+    text-decoration: underline;
+    font-size: 30px;
+}
+.experiencesuniv{
+    width: 80%; /*la largeur*/
+    height: 50%; /*la longeur*/
+    background-color: #e4cccc;
+    align-items: center;
+    border-radius: 3%;
+    color: black;
+}
+.experiencesuniv h2{
+    text-align: left;
+    margin-left: 7%;
+    margin-right: 5%;
+    font-size: 22px;
+}
+.experiencesuniv h1{
+    text-align: center;
+    margin-left: 0%;
+}
+.experiencesuniv img{
+    margin-left: 43%;
+    width: 15%;
+    height: 20%;
+}
+/*Fin experiences*/
+
+/*Début Compétences*/
+.Competences{
+    padding-bottom: 5%;
+}
+.block{
+    display: flex; /* Utilisation de flexbox pour la mise en page */
+}
+.titrecompetences{
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+.Compétence{
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 5%;
+    flex: 1; /* Permet aux blocs de texte de partager l'espace disponible */
+}
+.Compétence_{
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: -5%;
+    flex: 1;
+}
+.Compétence h1{
+    font-size: 25px;
+    text-decoration:underline;
+}
+.Compétence_ h1{
+    font-size: 25px;
+    text-decoration:underline;
+}
+.compétences{
+    width: 80%; /*la largeur*/
+    height: auto; /*la longeur*/
+    background-color: #e4cccc;
+    align-items: center;
+    border-radius: 3%;
+    color: black;
+}
+.compétences_centre{
+    width: 50%; /*la largeur*/
+    background-color: #e4cccc;
+    align-items: center;
+    border-radius: 3%;
+    color: black;
+    margin-left: 20%;
+}
+.Compétence li{
+   margin-left: 10%; 
+   font-size: 20px;
+}
+.Compétence_ li{
+    margin-left: 10%; 
+    font-size: 20px;
+ }
+.compétences_centre li{
+    margin-left: 35%;
+}
+.centre{
+    text-align: center;
+    font-size: 25px;
+    text-decoration:underline;
+    margin-left: -10%;
+}
+/*Fin Compétences*/
+
+/*Début Projets*/
+.Projets{
+    padding-bottom: 5%;
+}
+.titreprojets{
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+.Projet{
+    margin-top: 5%;
+    margin-left: 7%;
+}
+.Projet h1{
+    text-decoration: overline;
+}
+.projets{
+    width: 90%; /*la largeur*/
+    height: 50%; /*la longeur*/
+    background-color: #e4cccc;
+    align-items: center;
+    border-radius: 3%;
+    color: black;
+}
+.date{
+    font-size: 20px;
+    color: #555;
+    margin-left: 8%;
+    text-decoration: underline;
+}
+.projets h2{
+    margin-left: 8%;
+    font-size: 22px;
+}
+.projets li{
+    margin-left: 15%;
+    font-size: 18px;
+}
+/*Fin Projets*/
+
+/*Début Contact*/
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: black;
+    background-color: white;
+}
+mail{
+    color: white;
+}
+.mail:hover{
+    color: lightblue;
+    font-weight: bold;
+}
+/*Fin contact*/
+
+.container {
+    display: flex; /* Utilisation de flexbox pour la mise en page */
+  }
+  
+  .text-block {
+    flex: 1; /* Permet aux blocs de texte de partager l'espace disponible */
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+  }
