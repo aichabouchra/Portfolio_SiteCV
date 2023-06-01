@@ -1,0 +1,532 @@
+body{
+    padding: o;
+    margin: 0;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+  
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+  
+nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+}
+  
+nav ul li:first-child {
+    margin-left: 0;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+}
+  
+@media (max-width: 768px) {
+    .logo {
+      display: none;
+    }
+    
+    nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f2f2f2;
+      padding: 10px;
+      display: none;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+      
+    nav ul li:first-child {
+        margin-top: 10px;
+    }
+      
+    .menu-icon {
+        display: block;
+    }
+      
+    .menu-icon:before,
+    .menu-icon:after {
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: black;
+        border-radius: 2px;
+        transition: all 0.2s;
+    }
+
+    .menu-icon:before {
+        margin-bottom: 5px;
+    }
+      
+    .menu-icon.open {
+        background-color: transparent;
+    }
+      
+    .menu-icon.open:before {
+        transform: rotate(45deg);
+        margin-bottom: 0;
+    }
+      
+    .menu-icon.open:after {
+        transform: rotate(-45deg);
+    }
+      
+    .menu-icon.open ~ ul {
+        display: block;
+    }
+}
+.logo{
+    width: 10%;
+}
+.nom{
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+.nom h1 {
+    margin: 0;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+nav li{
+    display: inline; /* pour que le texte soit en ligne*/
+    list-style: none; /*pour retirer les déco qui s'ajoutent par défaut par la liste li*/
+}
+.choix:hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: overline;
+}
+
+/*Début image*/
+.image_texte {
+    position: relative;
+    display: inline-block;
+}
+.image{
+    width: 100%;
+    filter: blur(2px);
+}
+.texte{
+    position: absolute;
+    top: 70%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    height: 20%;
+    width: 50%;
+    border-radius: 2%;
+}
+.texte p{
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 5%;
+}
+@media (max-width: 480px) {
+    .texte {
+      font-size: 14px; /* taille de texte spécifique en pixels */
+    }
+}
+/*Fin image*/
+
+/*Début acceuil*/
+.Acceuil{
+    text-align: left;
+    color: black;
+    margin-left: 7%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.h1 {
+    margin: 0;
+    font-size: 50px;
+}
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #ebbfce;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.btn:hover {
+    background-color: #555;
+    color: #ebbfce;
+}
+.acceuil_texte{
+    width: 60%;
+    margin-right: 10px;
+    flex: 1;
+}
+.acceuil_texte p{
+    text-align: justify;
+    font-size: 20px;
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.acceuil_btn{
+    float: right;
+    margin-right: 10%;
+    margin-left: 20px;
+    font-weight: bold ;
+    margin-top: 7%;
+}
+@media (max-width: 768px) {
+    .Acceuil {
+      flex-direction: column;
+      margin-left: 0%;
+    }
+  
+    .acceuil_texte {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+}
+/*Fin acceuil*/
+
+/*Début Formation*/
+.Formation{
+    padding-bottom: 10%; /*ca va créer un espace en dessous du dernier bloc blanc*/
+}
+.titreformations{
+    font-size: 4vw;
+    margin-left: 7%;
+}
+.Formation p{
+    text-align: left;
+    margin-left: 7%;
+    font-size: 1.5vw;
+    margin-right: 5%;
+}
+.formationsecole h1{
+    font-size: 1.6vw;
+}
+@media (max-width: 768px) {
+    .titreformations{
+        font-size: 25px;
+    }
+    .Formation p{
+        font-size: 15px;
+    }
+    .formationsecole h1{
+        font-size: 19px;
+    }
+    .ecole h4{
+        font-size: 14px;
+    }
+}
+.formationsecole{
+    margin-left: 15%; /*ca permet d'écarter les 3 blocs blanc vers la droite */
+}
+.ecole{
+    width: 80%; /*la largeur*/
+    height: 50%; /*la longeur*/
+    background-color: #cacaca;
+    align-items: center;
+    border-radius: 1%;
+    color: black;
+    box-shadow: 2px 2px 5px black;
+    transition: transform 0.2s ease;
+}
+.ecole:hover{
+    transform: scale(1.05);
+}
+.ecole h4{
+    text-decoration: underline;
+    text-align: left;
+}
+.ecole img{ /*on veut modifier les images */
+    margin-left: 43%;
+    width: 15%;
+    height: 20%;
+}
+/*Fin études*/
+
+/*Début experiences*/
+.Experiences{
+    padding-bottom: 5%; /*ca va créer un espace en dessous du dernier bloc blanc*/
+}
+.titreexperiences{
+    font-size: 4vw;
+    margin-left: 7%;
+}
+.Experience{
+    margin-top: 5%;
+    margin-left: 15%; /*ca permet d'écarter les 2 blocs blanc vers la droite*/
+}
+.experiencesuniv h4{
+    text-decoration: underline;
+    text-align: center;
+    margin-left: -0%;
+}
+.Experience h1{
+    font-size: 1.6vw;
+}
+.experiencesuniv{
+    width: 80%; /*la largeur*/
+    height: 50%; /*la longeur*/
+    background-color: #cacaca;
+    align-items: center;
+    border-radius: 1%;
+    color: black;
+    box-shadow: 2px 2px 5px black;
+    transition: transform 0.2s ease;
+}
+.experiencesuniv:hover{
+    transform: scale(1.05);
+}
+.experiencesuniv p{
+    margin-right: 5%;
+    margin-left: 7%;
+    font-size: 1.5vw;
+}
+.experiencesuniv h1{
+    text-align: center;
+    margin-left: 0%;
+}
+.experiencesuniv img{
+    margin-left: 43%;
+    width: 15%;
+    height: 20%;
+}
+@media (max-width: 768px) {
+    .titreexperiences{
+        font-size: 25px;
+    }
+    .experiencesuniv h4{
+        font-size: 14px;
+    }
+    .Experience h1{
+        font-size: 19px;
+    }
+    .experiencesuniv p{
+        font-size: 15px;
+    }
+}
+/*Fin experiences*/
+
+/*Début Compétences*/
+.Competences{
+    padding-bottom: 5%;
+}
+.block{
+    display: flex; /* Utilisation de flexbox pour la mise en page */
+}
+.titrecompetences{
+    font-size: 4vw;
+    text-align: center;
+}
+.Compétence{
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 5%;
+    flex: 1; /* Permet aux blocs de texte de partager l'espace disponible */
+}
+.Compétence_{
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: -5%;
+    flex: 1;
+}
+.Compétence h1{
+    font-size: 1.6vw;
+    text-decoration:underline;
+}
+.Compétence_ h1{
+    font-size: 1.6vw;
+    text-decoration:underline;
+}
+.compétences{
+    width: 80%; /*la largeur*/
+    height: auto; /*la longeur*/
+    background-color: #cacaca;
+    align-items: center;
+    border-radius: 1%;
+    color: black;
+    box-shadow: 2px 2px 5px black;
+    transition: transform 0.2s ease;
+}
+.compétences:hover{
+    transform: scale(1.05);
+}
+.compétences_centre{
+    width: 50%; /*la largeur*/
+    background-color: #cacaca;
+    align-items: center;
+    border-radius: 3%;
+    color: black;
+    margin-left: 20%;
+    box-shadow: 2px 2px 5px black;
+    transition: transform 0.2s ease;
+}
+.compétences_centre:hover{
+    transform: scale(1.05);
+}
+.Compétence li{
+   margin-left: 8%; 
+   font-size: 20px;
+}
+.Compétence_ li{
+    margin-left: 8%; 
+    font-size: 20px;
+ }
+.compétences_centre li{
+    margin-left: 15%;
+}
+.centre{
+    text-align: center;
+    font-size: 25px;
+    text-decoration:underline;
+    margin-left: -10%;
+}
+@media (max-width: 768px) {
+    .titrecompetences{
+        font-size: 25px;
+    }
+    .Compétence h1{
+        font-size: 19px;
+    }
+    .Compétence_ h1{
+        font-size: 19px;
+    }
+    .experiencesuniv h4{
+        font-size: 14px;
+    }
+    .compétences li{
+        font-size: 15px;
+    }
+    .compétences_centre li{
+        font-size: 15px;
+    }
+}
+/*Fin Compétences*/
+
+/*Début Projets*/
+.Projets{
+    padding-bottom: 5%;
+}
+.titreprojets{
+    font-size: 4vw;
+    text-align: center;
+}
+.Projet{
+    margin-top: 5%;
+    margin-left: 7%;
+}
+.Projet h1{
+    font-size: 1.6vw;
+    text-decoration: overline;
+}
+.projets{
+    width: 90%; /*la largeur*/
+    height: 50%; /*la longeur*/
+    background-color: #cacaca;
+    align-items: center;
+    border-radius: 3%;
+    color: black;
+    box-shadow: 2px 2px 5px black;
+    transition: transform 0.2s ease;
+}
+.projets:hover {
+    transform: scale(1.05);
+}
+.date{
+    font-size: 20px;
+    color: #555;
+    margin-left: 8%;
+    text-decoration: underline;
+}
+.projets h4{
+    text-decoration: underline;
+}
+.projets p{
+    margin-left: 8%;
+    font-size: 20px;
+}
+.projets li{
+    margin-left: 15%;
+    font-size: 18px;
+}
+@media (max-width: 768px) {
+    .titreprojets{
+        font-size: 25px;
+    }
+    .Projet h1{
+        font-size: 19px;
+    }
+    .projets h4{
+        font-size: 14px;
+    }
+    .projets p{
+        font-size: 15px;
+    }
+    .projets li{
+        font-size: 14px;
+    }
+}
+/*Fin Projets*/
+
+/*Début Contact*/
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+}
+.mail{
+    color: white;
+}
+.mail:hover{
+    color: #ebbfce;
+    font-weight: bold;
+}
+/*Fin contact*/
+
+.container {
+    display: flex; /* Utilisation de flexbox pour la mise en page */
+  }
+  
+  .text-block {
+    flex: 1; /* Permet aux blocs de texte de partager l'espace disponible */
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+  }
